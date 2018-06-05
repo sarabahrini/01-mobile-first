@@ -17,7 +17,7 @@
   <link rel = "stylesheets" type = "text/css" href= "vendor/styles/modules.css">
   
   <!-- COMMENT: Explain the ordering of the loading of the stylesheets -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!--base.css is first because it includes general styling. It applies to elements such as body, main, font and background color. Next is layout.css, can contain general positioning on the page for elements such as header, footer, nav and aside. Classes and IDs are included in this css file. Contains smaller components such as list items, individual images, specific paragraphs. Includes classes and descendant selectors.-->
 
   <!-- REVIEW: This is the favicon -->
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
@@ -26,7 +26,7 @@
   <header class="clearfix">
     <!-- COMMENT: Read the CSS Tricks article on clearfix, and explain in your own words how they are used. -->
     <!-- https://css-tricks.com/snippets/css/clear-fix/ -->
-    <!-- PUT YOUR RESPONSE HERE -->
+    <!-- In the past there were many lines of code used to account for all the predefined items in class ids. We can now write shorter code for css styling. The article specifically metioned group class. -->
 
     <section class="heading-group-h1">
       <h1>
@@ -34,9 +34,10 @@
       </h1>
       <h2>The shocking power of static pages</h2>
     </section>
+    
     <nav>
       <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
-
+      <div class="icon-menu"></div>
       <ul>
         <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
         <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
@@ -44,6 +45,7 @@
         <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
       </ul>
     </nav>
+  </div>
   </header>
   <main>
     <section id="articles" class="tab-content">
