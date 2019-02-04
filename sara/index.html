@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- TODO: Add a meta tag to properly set the viewport and initial scale -->
+  <!-- DONE: Add a meta tag to properly set the viewport and initial scale -->
   <meta name = "viewport" content = "width=device-width, initial-scale=1">
   <title>Lab 1</title>
-   <!-- TODO: Add a link to a normalize.css file, which should be in your vendor/styles/ directory -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/normalize.css">
+   <!-- DONE: Add a link to a normalize.css file, which should be in your vendor/styles/ directory -->
+  <link rel = "stylesheet" type = "text/css" href= "vendor/styles/normalize.css">
   
-  <!-- TODO: Link in the provided styles/icons.css file so that you can use icon fonts -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/icons.css">
+  <!-- DONE: Link in the provided styles/icons.css file so that you can use icon fonts -->
+  <link rel = "stylesheet" type = "text/css" href= "vendor/styles/icons.css">
   
-  <!-- TODO: Link in your SMACSS-appropriate CSS files: base, layout, and modules -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/base.css">
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/layout.css">
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/modules.css">
+  <!-- DONE: Link in your SMACSS-appropriate CSS files: base, layout, and modules -->
+  <link rel = "stylesheet" type = "text/css" href= "styles/base.css">
+  <link rel = "stylesheet" type = "text/css" href= "styles/layout.css">
+  <link rel = "stylesheet" type = "text/css" href= "styles/modules.css">
   
   <!-- COMMENT: Explain the ordering of the loading of the stylesheets -->
-  <!--base.css is first because it includes general styling. It applies to elements such as body, main, font and background color. Next is layout.css, can contain general positioning on the page for elements such as header, footer, nav and aside. Classes and IDs are included in this css file. Contains smaller components such as list items, individual images, specific paragraphs. Includes classes and descendant selectors.-->
+  <!-- ANSWER
+    1st. base.css, because it includes global styles - general styling. It applies to elements such as body, main, font and background color. 
+
+    2nd. layout.css, (page layout) because it contains general positioning on the page for elements such as header, footer, nav and aside. Classes and IDs are included in this css file. 
+    3rd. modules.css, contains smaller components such as list items, individual images, specific paragraphs. Includes classes and descendant selectors.
+  -->
 
   <!-- REVIEW: This is the favicon -->
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 </head>
 <body>
-  <header class="clearfix">
+  <header class="clearfix main-header">
     <!-- COMMENT: Read the CSS Tricks article on clearfix, and explain in your own words how they are used. -->
     <!-- https://css-tricks.com/snippets/css/clear-fix/ -->
     <!-- In the past there were many lines of code used to account for all the predefined items in class ids. We can now write shorter code for css styling. The article specifically metioned group class. -->
@@ -33,12 +38,14 @@
         Kilovolt Blog!
       </h1>
       <h2>The shocking power of static pages</h2>
+      <h2 id="tablet">THIS IS TABLET VIEW</h2>
+      <h2 id="mobile">THIS IS MOBILE VIEW</h2>
     </section>
     
     <nav>
       <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
       <div class="icon-menu"></div>
-      <ul>
+      <ul id="navbar">
         <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
         <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
@@ -69,7 +76,7 @@
               published <time pubdate="" datetime="2015-11-04" title="2015-11-04">about 719 days ago</time>
             </div>
           </header>
-          <section class="article-body"><p>Baseball ipsum dolor sit amet base on balls full count leadoff. National pastime stance pine tar dribbler rookie dodgers hardball plate. <img src="http://lorempixel.com/400/200/" class="pull-left">Club sidearm shift red sox ground rule double, left fielder pennant good eye rubber game. Steal petey center field blue wins arm visitors. Out rope base cookie grass bandbox error. Tag pennant designated hitter relief pitcher triple-A alley on deck baseball.</p><p>Dribbler left on base arm curve bag, slider around the horn disabled list. Pennant catcher gapper rope screwball home cork foul. Nubber slide rake relief pitcher wrigley choke up cup of coffee cycle bench. Loss strikeout bandbox cardinals second base practice gap center fielder. Screwball fielder's choice play baseline rubber game warning track bleeder. Mustard inning in the hole astroturf alley fielder's choice left fielder.</p><p>Home grand slam suicide squeeze breaking ball batter's box flyout starting pitcher. Baseball card basehit double switch save batting average losses tossed umpire batter's box. Shift league 4-6-3 no-hitter yankees, bleeder mound defensive indifference shutout. Squeeze mound butcher boy loss rip chin music cracker jack. Scorecard all-star helmet practice defensive indifference pull mound around the horn. Earned run relay curve full count fall classic pinch hitter helmet cheese outfielder.</p><p>Foul pitchout moneyball all-star runs left on base fielder's choice. Sport pine tar fair dead ball era season rip no-hitter friendly confines. Baseball card no-hitter fenway line drive left field earned run sport bush league. Tossed walk off dodgers error streak, center fielder tossed chin music. Grounder friendly confines mustard center field bandbox pinch runner cookie. Alley left on base bat second baseman passed ball foul error cy young.</p><p>No-hitter breaking ball stadium doubleheader rubber fair team rake. Error leather left fielder outs at-bat leadoff cork hit by pitch rally. Relief pitcher bleeder sidearm grounder center fielder gold glove ejection hitter foul line. Error 4-6-3 gold glove knuckleball dead ball era, save pine tar. Robbed reliever cellar alley stretch club starter leather. Red sox dead red pull no-hitter assist can of corn manager error play.</p></section>
+          <section class="article-body"><p>Baseball ipsum dolor sit amet base on balls full count leadoff. National pastime stance pine tar dribbler rookie dodgers hardball plate. <img src="http://lorem.com/400/200/" class="pull-left">Club sidearm shift red sox ground rule double, left fielder pennant good eye rubber game. Steal petey center field blue wins arm visitors. Out rope base cookie grass bandbox error. Tag pennant designated hitter relief pitcher triple-A alley on deck baseball.</p><p>Dribbler left on base arm curve bag, slider around the horn disabled list. Pennant catcher gapper rope screwball home cork foul. Nubber slide rake relief pitcher wrigley choke up cup of coffee cycle bench. Loss strikeout bandbox cardinals second base practice gap center fielder. Screwball fielder's choice play baseline rubber game warning track bleeder. Mustard inning in the hole astroturf alley fielder's choice left fielder.</p><p>Home grand slam suicide squeeze breaking ball batter's box flyout starting pitcher. Baseball card basehit double switch save batting average losses tossed umpire batter's box. Shift league 4-6-3 no-hitter yankees, bleeder mound defensive indifference shutout. Squeeze mound butcher boy loss rip chin music cracker jack. Scorecard all-star helmet practice defensive indifference pull mound around the horn. Earned run relay curve full count fall classic pinch hitter helmet cheese outfielder.</p><p>Foul pitchout moneyball all-star runs left on base fielder's choice. Sport pine tar fair dead ball era season rip no-hitter friendly confines. Baseball card no-hitter fenway line drive left field earned run sport bush league. Tossed walk off dodgers error streak, center fielder tossed chin music. Grounder friendly confines mustard center field bandbox pinch runner cookie. Alley left on base bat second baseman passed ball foul error cy young.</p><p>No-hitter breaking ball stadium doubleheader rubber fair team rake. Error leather left fielder outs at-bat leadoff cork hit by pitch rally. Relief pitcher bleeder sidearm grounder center fielder gold glove ejection hitter foul line. Error 4-6-3 gold glove knuckleball dead ball era, save pine tar. Robbed reliever cellar alley stretch club starter leather. Red sox dead red pull no-hitter assist can of corn manager error play.</p></section>
       </article>
       <article class="clearfix" data-category="cat">
           <header>
