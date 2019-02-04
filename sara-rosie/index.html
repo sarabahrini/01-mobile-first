@@ -6,15 +6,15 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1">
   <title>Lab 1</title>
    <!-- TODO: Add a link to a normalize.css file, which should be in your vendor/styles/ directory -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/normalize.css">
+  <link rel = "stylesheet" type = "text/css" href= "vendor/styles/normalize.css">
   
   <!-- TODO: Link in the provided styles/icons.css file so that you can use icon fonts -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/icons.css">
+  <link rel = "stylesheet" type = "text/css" href= "vendor/styles/icons.css">
   
   <!-- TODO: Link in your SMACSS-appropriate CSS files: base, layout, and modules -->
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/base.css">
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/layout.css">
-  <link rel = "stylesheets" type = "text/css" href= "vendor/styles/modules.css">
+  <link rel = "stylesheet" type = "text/css" href= "styles/base.css">
+  <link rel = "stylesheet" type = "text/css" href= "styles/layout.css">
+  <link rel = "stylesheet" type = "text/css" href= "styles/modules.css">
   
   <!-- COMMENT: Explain the ordering of the loading of the stylesheets -->
   <!--base.css is first because it includes general styling. It applies to elements such as body, main, font and background color. Next is layout.css, can contain general positioning on the page for elements such as header, footer, nav and aside. Classes and IDs are included in this css file. Contains smaller components such as list items, individual images, specific paragraphs. Includes classes and descendant selectors.-->
@@ -23,7 +23,7 @@
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 </head>
 <body>
-  <header class="clearfix">
+  <header class="clearfix main-header">
     <!-- COMMENT: Read the CSS Tricks article on clearfix, and explain in your own words how they are used. -->
     <!-- https://css-tricks.com/snippets/css/clear-fix/ -->
     <!-- In the past there were many lines of code used to account for all the predefined items in class ids. We can now write shorter code for css styling. The article specifically metioned group class. -->
@@ -38,7 +38,7 @@
     <nav>
       <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
       <div class="icon-menu"></div>
-      <ul>
+      <ul id="navbar">
         <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
         <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
