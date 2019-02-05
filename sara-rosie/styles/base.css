@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  background-color: grey;
+}
+
+.icon-menu {
+  background-color: yellow;
+  font-size: 4em;
+}
+
+footer{
+  background-color: blueviolet;
+}
+
+@media only screen and (min-width: 750px) {
+  /* header.clearfix{
+    background-color: bisque;
+  
+  } */
+  
+  body {
+    background-color:hsl(169, 15%, 86%);
+    color:black;
+  }
+  .icon-menu {
+    display: none;
+  }
+}
+
+
+/* @media only screen and (max-width: 650px) {
+  body {
+    background-color: red;
+    color: orange;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body {
+    background-color: blue;
+    color: white;
+  }
+} */

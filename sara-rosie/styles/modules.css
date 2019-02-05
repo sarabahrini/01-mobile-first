@@ -1,0 +1,15 @@
+.heading-group-h1 {
+  background-color:red;
+  text-align:left;
+  }
+
+.main-header {
+  background-color:#5cf5ed;
+  box-shadow: 10px 10px 10px #4445;
+}
+
+img {
+  border: 7px solid beige;
+  border-radius: 12px;
+  box-shadow: 7px 7px 7px #4445;
+}
